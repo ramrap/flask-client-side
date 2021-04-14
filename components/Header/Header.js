@@ -1,6 +1,6 @@
 import { useAuth } from "../../context/auth";
 import { loadFirebase } from "../../context/firebase";
-
+import Link from 'next/link'
 // import axiosInstance from "../../util/axios";
 
 export default function Header() {
@@ -36,14 +36,16 @@ export default function Header() {
     <div>
       <div className="d-flex align-items-center justify-content-between w-100 p-3">
         <div>
+          <Link href="/">
           <div className="font-weight-bold">
             Deep <span className="text-monospace">Learning</span>
           </div>
+          </Link>
         </div>
         <div>
           <div className="d-flex align-items-center">
             <div className="p-2">
-              Hackathons
+              About Us
             </div>
             {token ? 
               <div className="p-2" onClick={() => handleLogout()}>
